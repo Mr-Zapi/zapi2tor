@@ -30,7 +30,7 @@ For better performance and security, it is highly recommended to use your own we
 2.  Once you have your bridge line, insert it into the designated location in the source code.
 3.  Recompile the project using the command:
     ```bash
-    go build zapi2tor
+    go build -o zapi2tor
     ```
 
 If you skip this step, you will use a default, shared bridge, which may result in slower connection speeds.
