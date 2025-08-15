@@ -1,0 +1,5 @@
+UseBridges 1
+DNSPort 127.0.0.1:53
+AutomapHostsOnResolve 1
+ClientTransportPlugin webtunnel exec /home/zapi/vpn-tor/second/tor-vpn-ui/vpn-client
+Bridge webtunnel [2001:db8:75db:c6f2:1dae:121:7a04:9e9d]:443 4B673DF159CFC12AC91FC2E6AC3047FF2183FCEA url=http://freifunk.ckgc.de/xBKEzZunnc3A5pcf6jaeVyPL
