@@ -8,19 +8,9 @@ This application creates a new network interface and modifies your system's DNS 
 
 When you launch the application, a tray icon will appear. You can use this icon to connect to Tor, disconnect, and safely exit the application. **Failure to use the "Exit" option from the tray menu can lead to broken network settings, preventing internet access until they are restored.**
 
-## Manual Network Recovery
+## Network Recovery
 
-If the application terminates unexpectedly, you will need to restore your network connection manually. Execute the following commands in sequence:
-
-```bash
-sudo killall -9 zapi2tor
-echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf
-sudo ip route del <your-bridge-ip>
-sudo ip route del default
-sudo ip route add default via <your-gateway-ip> dev <your-network-interface>
-sudo ip link set mytun down
-```
-**Note:** You will need to replace `<your-bridge-ip>`, `<your-gateway-ip>`, and `<your-network-interface>` with your actual network configuration values.
+If the application terminates unexpectedly and your internet connection stops working, simply restart the application and click the "Отключить" button to restore your network settings.
 
 ## Using a Custom Bridge
 
